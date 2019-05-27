@@ -1,6 +1,6 @@
 {
     "name": "fourn\/admin-ck",
-    "description": "CkEditor+CkFinder+CkFinder-pop",
+    "description": "ckeditor+ckfinder",
     "license": "MIT",
     "authors": [
         {
@@ -9,11 +9,19 @@
         }
     ],
     "require": {
-        "ckfinder/ckfinder-laravel-package": "v3.4.5.1"
+        "ckfinder/ckfinder-laravel-package": "^3.4",
+        "encore/laravel-admin": "^1.6"
     },
     "autoload": {
         "psr-4": {
             "Fourn\\AdminCk\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fourn\\AdminCk\\AdminCkServiceProvider"
+            ]
         }
     }
 }
