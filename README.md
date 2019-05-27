@@ -2,7 +2,7 @@
 
 <p align="center">让laravel-admin能够方便的使用ckeditor和ckfinder</p>
 
-[](http://ww2.sinaimg.cn/large/006tNc79gy1g3g13kk4tmg312y0mrdv8.gif)
+![](http://ww2.sinaimg.cn/large/006tNc79gy1g3g13kk4tmg312y0mrdv8.gif)
 
 ## Installing
 
