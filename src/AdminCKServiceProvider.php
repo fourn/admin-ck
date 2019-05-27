@@ -1,13 +1,12 @@
 <?php
 
-namespace Fourn\AdminCk;
+namespace Fourn\AdminCK;
 
 use Illuminate\Support\ServiceProvider;
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
-use Fourn\AdminCk\CkEditor\CkEditor;
 
-class AdminCkServiceProvider extends ServiceProvider
+class AdminCKServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -27,7 +26,7 @@ class AdminCkServiceProvider extends ServiceProvider
 
         Admin::booting(function () {
             // 注册富文本编辑器方法到Form
-            Form::extend('ckeditor', CkEditor::class);
+            Form::extend('ckeditor', CKEditor::class);
         });
     }
 }

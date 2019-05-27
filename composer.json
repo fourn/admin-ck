@@ -14,14 +14,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Fourn\\AdminCk\\": "src",
+            "Fourn\\AdminCK\\": "src",
             "CKSource\\CKFinder\\": "_connector/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Fourn\\AdminCk\\AdminCkServiceProvider"
+                "Fourn\\AdminCK\\AdminCkServiceProvider"
             ]
         }
     }

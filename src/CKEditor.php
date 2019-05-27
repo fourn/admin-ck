@@ -1,10 +1,10 @@
 <?php
 
-namespace Fourn\AdminCk\CkEditor;
+namespace Fourn\AdminCK;
 
 use Encore\Admin\Form\Field;
 
-class CkEditor extends Field
+class CKEditor extends Field
 {
     public static $js = [
         // 编辑器用的网络资源
