@@ -7,7 +7,10 @@ use Encore\Admin\Form\Field;
 class CkEditor extends Field
 {
     public static $js = [
-        '//cdn.ckeditor.com/4.11.4/standard/ckeditor.js'
+        // 编辑器用的网络资源
+        '//cdn.ckeditor.com/4.11.4/standard/ckeditor.js',
+        // 文件浏览器用的静态资源
+        '/vendor/admin-ck/ckfinder/ckfinder.js',
     ];
 
     protected $view = 'admin-ck::ckeditor';
@@ -19,7 +22,6 @@ var editor = CKEDITOR.replace('{$this->id}');
 CKFinder.config( { connectorPath: '/ckfinder/connector' } );
 CKFinder.setupCKEditor( editor );
 EOT;
-
         return parent::render();
     }
 }
