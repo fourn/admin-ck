@@ -1,6 +1,6 @@
 {
     "name": "fourn/admin-ck",
-    "description": "ckeditor ckfinder",
+    "description": "让laravel-admin能够方便的使用ckeditor和ckfinder",
     "license": "MIT",
     "authors": [
         {
