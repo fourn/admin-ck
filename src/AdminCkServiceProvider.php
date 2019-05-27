@@ -17,6 +17,8 @@ class AdminCkServiceProvider extends ServiceProvider
                 __DIR__.'/views' => resource_path('views/vendor/admin-ck'),
                 // laravel-ckfinder配置文件
                 __DIR__.'/config/ckfinder.php' => config_path('ckfinder.php'),
+                // ckfinder静态文件
+                __DIR__.'assets' => public_path('vendor/admin-ck'),
             ]);
         }
 
