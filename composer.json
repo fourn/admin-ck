@@ -1,0 +1,19 @@
+{
+    "name": "fourn\/admin-ck",
+    "description": "CkEditor+CkFinder+CkFinder-pop",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "fourn",
+            "email": "fourn@foxmail.com"
+        }
+    ],
+    "require": {
+        "ckfinder/ckfinder-laravel-package": "v3.4.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fourn\\AdminCk\\": "src"
+        }
+    }
+}
