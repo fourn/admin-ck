@@ -7,7 +7,7 @@ use Encore\Admin\Admin;
 use Encore\Admin\Form;
 use Fourn\AdminCk\CkEditor\CkEditor;
 
-class AdminCkProvider extends ServiceProvider
+class AdminCkServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -17,6 +17,8 @@ class AdminCkProvider extends ServiceProvider
 //                __DIR__.'/../resources/assets' => public_path('vendor/kindeditor')
             ]);
         }
+
+        $this->loadViewsFrom(__DIR__.'/views/ckeditor.blade.php', 'admin-ck');
 
         Admin::booting(function () {
             Form::extend('ckeditor', CkEditor::class);

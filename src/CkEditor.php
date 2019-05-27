@@ -10,7 +10,7 @@ class CkEditor extends Field
         '//cdn.ckeditor.com/4.11.4/standard/ckeditor.js'
     ];
 
-    protected $view = 'admin.ckeditor';
+    protected $view = 'admin-ck::ckeditor';
 
     public function render()
     {
