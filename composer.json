@@ -1,6 +1,6 @@
 {
-    "name": "fourn\/admin-ck",
-    "description": "ckeditor+ckfinder",
+    "name": "fourn/admin-ck",
+    "description": "ckeditor ckfinder",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Fourn\\AdminCK\\": "src",
+            "Fourn\\AdminCK\\": "src/",
             "CKSource\\CKFinder\\": "_connector/"
         }
     },
