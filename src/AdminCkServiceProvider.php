@@ -13,15 +13,18 @@ class AdminCkServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/views/ckeditor.blade.php' => resource_path('views/vendor/admin-ck'),
-//                __DIR__.'/config/ckfinder.php' => config_path('ckfinder.php'),
-//                __DIR__.'/../resources/assets' => public_path('vendor/kindeditor')
+                // 富文本编辑器视图文件
+                __DIR__.'/views' => resource_path('views/vendor/admin-ck'),
+                // laravel-ckfinder配置文件
+                __DIR__.'/config/ckfinder.php' => config_path('ckfinder.php'),
             ]);
         }
 
-        $this->loadViewsFrom(__DIR__.'/views/ckeditor.blade.php', 'admin-ck');
+        // 载入富文本编辑器视图文件
+        $this->loadViewsFrom(__DIR__.'/views', 'admin-ck');
 
         Admin::booting(function () {
+            // 注册富文本编辑器方法到Form
             Form::extend('ckeditor', CkEditor::class);
         });
     }
