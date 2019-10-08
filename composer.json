@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "ckfinder/ckfinder-laravel-package": "^3.4",
-        "encore/laravel-admin": "^1.6"
+        "fourn/ckfinder-laravel-package": "^3.5",
+        "encore/laravel-admin": "^1.7"
     },
     "autoload": {
         "psr-4": {
