@@ -8,7 +8,7 @@ class CKEditor extends Field
 {
     public static $js = [
         // 编辑器用的网络资源
-        '//cdn.ckeditor.com/4.11.4/standard/ckeditor.js',
+        'https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js',
         // 文件浏览器用的静态资源
         '/vendor/admin-ck/ckfinder/ckfinder.js',
     ];
