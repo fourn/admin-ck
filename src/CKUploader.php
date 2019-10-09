@@ -7,7 +7,6 @@ use Encore\Admin\Form\Field;
 class CKUploader extends Field
 {
     public static $js = [
-        // 文件浏览器用的静态资源
         '/vendor/admin-ck/ckfinder/ckfinder.js',
     ];
 
@@ -15,27 +14,21 @@ class CKUploader extends Field
 
     public function render()
     {
+        $filebrowserUploadUrl = route('ckfinder-connector');
         $this->script = <<<EOT
 function selectFileWithCKFinder( elementId ) {
+    CKFinder.config( { connectorPath: '{$filebrowserUploadUrl}' } );
     CKFinder.popup( {
         chooseFiles: true,
-        width: 800,
-        height: 600,
         onInit: function( finder ) {
             finder.on( 'files:choose', function( evt ) {
-                var file = evt.data.files.first();
-                console.log(file);
-                var output = document.getElementById( 'ckfinder-input-' + elementId );
-                output.value = file.getUrl();
-                var image = document.getElementById( 'ckfinder-image-' + elementId);
-                image.src = file.getUrl();
+                var url = evt.data.files.first().getUrl();
+                document.getElementById( 'ckfinder-input-' + elementId ).value = url;
+                document.getElementById( 'ckfinder-image-' + elementId).src = url;
             } );
-
             finder.on( 'file:choose:resizedImage', function( evt ) {
-                var output = document.getElementById( 'ckfinder-input-' + elementId );
-                output.value = evt.data.resizedUrl;
-                var image = document.getElementById( 'ckfinder-image-' + elementId);
-                image.src = evt.data.resizedUrl.getUrl();
+                document.getElementById( 'ckfinder-input-' + elementId ).value = evt.data.resizedUrl;
+                document.getElementById( 'ckfinder-image-' + elementId).src = evt.data.resizedUrl;
             } );
         }
     } );

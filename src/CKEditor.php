@@ -6,10 +6,8 @@ use Encore\Admin\Form\Field;
 
 class CKEditor extends Field
 {
-    public static $js = [
-        // 编辑器用的网络资源
-        'https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js',
-        // 文件浏览器用的静态资源
+	protected static $js = [
+        '/vendor/admin-ck/ckeditor/ckeditor.js',
         '/vendor/admin-ck/ckfinder/ckfinder.js',
     ];
 
@@ -17,11 +15,18 @@ class CKEditor extends Field
 
     public function render()
     {
+        $filebrowserUploadUrl = route('ckfinder-connector');
+        $filebrowserBrowseUrl = route('ckfinder-browser');
         $this->script = <<<EOT
-var editor = CKEDITOR.replace('{$this->id}');
-CKFinder.config( { connectorPath: '/ckfinder/connector' } );
+var editor = CKEDITOR.replace('{$this->id}', {
+    filebrowserBrowseUrl: '{$filebrowserBrowseUrl}?type=Files',
+    filebrowserImageBrowseUrl: '{$filebrowserBrowseUrl}?type=Images',
+    filebrowserUploadUrl: '{$filebrowserUploadUrl}?command=QuickUpload&type=Files',
+    filebrowserImageUploadUrl: '{$filebrowserUploadUrl}?command=QuickUpload&type=Images'
+});
 CKFinder.setupCKEditor( editor );
 EOT;
+
         return parent::render();
     }
 }

@@ -1,30 +1,28 @@
 <h1 align="center"> admin-ck </h1>
 
-<p align="center">让laravel-admin能够方便的使用ckeditor和ckfinder</p>
+<p align="center"> Easy way to use ckfinder and ckeditor in laravel-admin.</p>
 
-![](http://ww2.sinaimg.cn/large/006tNc79gy1g3g13kk4tmg312y0mrdv8.gif)
 
 ## Installing
 
 ```shell
-$ composer require fourn/admin-ck
+$ composer require fourn/admin-ck -vvv
 ```
 
 ## Usage
 
-```shell
-$ php artisan vendor:publish --tag=admin-ck
-```
-
-```php
-$form->ckuploader('image', '封面图');
-$form->ckeditor('content', '内容');
-```
+TODO
 
 ## Contributing
 
-配置文件在config/ckfinder.php
+You can contribute in one of three ways:
+
+1. File bug reports using the [issue tracker](https://github.com/fourn/admin-ck/issues).
+2. Answer questions or fix bugs on the [issue tracker](https://github.com/fourn/admin-ck/issues).
+3. Contribute new features or update the wiki.
+
+_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
 
 ## License
+
 MIT
-fourn@foxmail.com
