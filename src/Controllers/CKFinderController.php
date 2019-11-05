@@ -14,15 +14,12 @@ class CKFinderController extends Controller
     {
         $authenticationMiddleware = config('ckfinder.authentication');
 
-        // 在没有配置中间件的情况下使用默认的中间件（直接拒绝）
-        if(!is_callable($authenticationMiddleware)) {
-            if(isset($authenticationMiddleware) && is_string($authenticationMiddleware)) {
-                $this->middleware($authenticationMiddleware);
-            } else {
-                $this->middleware(CKFinderMiddleware::class);
-            }
+        // 在没有配置中间件的情况下使用默认的中间件（直接通过）
+        if ($authenticationMiddleware) {
+            $this->middleware($authenticationMiddleware);
+        } else {
+            $this->middleware(CKFinderMiddleware::class);
         }
-        
     }
 
     public function requestAction(Request $request)
