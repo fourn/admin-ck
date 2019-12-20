@@ -30,8 +30,8 @@ $config['authentication'] = '';
 /*============================ License Key ============================================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = 'example.com';
-$config['licenseKey']  = '*8?A-*K**-E**8-*F**-*B**-2*6*-A**F';
+$config['licenseName'] = 'putong.one';
+$config['licenseKey']  = '*Z?2-*1**-3**E-*4**-*3**-5*B*-2**F';
 
 /*============================ CKFinder Internal Directory ============================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_privateDir
